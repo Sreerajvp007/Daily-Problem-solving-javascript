@@ -8,7 +8,7 @@
 // Input [9, 10, 10, 3, 12, 12, 12, 5, 6, 6, 7, 8, 8] 
 // Output [10, 10, 12, 12, 12, 6, 6, 8, 8]
 
-let arr = [9, 10, 10, 3, 12, 12, 12, 5, 6, 6, 7, 8, 8] ;
+let arr = [9, 10, 10, 3, 12, 12, 12,7,7, 5,5,2,5,5,5, 6, 6, 8,7, 8] ;
 let newArr= [];
 let count;
 for(let i=0;i<arr.length;i++){
@@ -20,9 +20,15 @@ for(let i=0;i<arr.length;i++){
         }
     
 }
-if(count>1 && arr[i]%2==0){
+if(arr[i]%2==0 && count>1){
+    newArr.push(arr[i])
+    
+}else if(count>2){
     newArr.push(arr[i])
 }
+
+    
+
 }
 
 console.log(newArr)
